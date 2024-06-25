@@ -325,12 +325,12 @@ header.sticky {
     margin-top: 4.2rem;
 }
 
-.row img { 
-    height: auto;
-    width: 100%;
-    border-radius: 28px;
-    margin-bottom: 1.4rem;
+.Portfolio-content .row img {
+    width: 100%; /* تأكيد على العرض يأخذ كل عرض المحتوى */
+    height: 200px; /* تعيين ارتفاع ثابت للصور */
+    object-fit: cover; /*  يملأ الصورة المساحة المخصصة لها دون تشويه النسبة الطول إلى العرض. */
 }
+
 
 .row {
     background: #2d343f;
