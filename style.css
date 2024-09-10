@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+    font-family: "Titillium Web", sans-serif;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
@@ -24,6 +24,8 @@
 body {
     color: var(--text-color);
     background: var(--bg-color);
+    font-family: "Titillium Web", sans-serif;
+
 }
 
 header { 
@@ -100,9 +102,11 @@ section{
 .hero { 
     height: 100vh;
     width: 100%;
+    background-color: var(--bg-color); /* استخدام نفس لون الخلفية */
     background: url(../img/background.png);
-    background-position: top right;
-    background-size: cover;
+    background-position: 90% 90%; /* لتحريك الصورة أكثر لأسفل ولليمين */
+    background-size: 700px; /* تصغير الصورة */
+    background-repeat: no-repeat; /* لمنع تكرار الخلفية */
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -189,6 +193,66 @@ header.sticky {
     background: var(--bg-color);
     box-shadow: 0 .1rem 1rem rgba(0, 0, 0, .2);
     padding: 16px 16%;
+}
+
+.skills {
+    padding: 60px 5%;
+    background-color: var(--second-bg-color);
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+}
+
+.skills-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.skill-box {
+    background: #2d343f;
+    border-radius: 28px;
+    padding: 20px;
+    box-shadow: 0 0 10px var(--main-color);
+    transition: all .50s ease;
+    text-align: center;
+    margin: 10px; /* إضافة margin لجعل المسافة بين العناصر */
+
+}
+
+
+.skill-box i {
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    overflow: hidden;
+    height: 30px;
+    margin-top: 10px;
+    transition: background-color 0.1s ease; /* تأثير عند التحميل */
+}
+
+.skill-progress {
+    background-color: var(--main-color);
+    height: 100%;
+    line-height: 30px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    transition: width 0.1s ease; /* تأثير التحميل */
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px var(--main-color);
 }
 
 .about { 
